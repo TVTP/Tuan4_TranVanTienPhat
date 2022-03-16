@@ -1,0 +1,66 @@
+﻿@model Tuan4_TranVanTienPhat.Models.Sach
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Chi tiết sách</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã loại:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maloai)
+        </dd>
+
+        <dt>
+            Tên sách
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tensach)
+        </dd>
+
+        <dt>
+            Hình
+        </dt>
+
+        <dd>
+            <img src="@Html.DisplayFor(model => model.hinh)" width="20%" />
+        </dd>
+
+        <dt>
+            Giá bán
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giaban)
+        </dd>
+
+        <dt>
+            Ngày cập nhật
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaycapnhat)
+        </dd>
+
+        <dt>
+            Số lượng tồn
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soluongton)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh sửa", "Edit", new { id = Model.masach }) |
+    @Html.ActionLink("Trở về", "ListSach")
+</p>
